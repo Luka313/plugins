@@ -69,8 +69,9 @@ class UrlLauncher {
       launchIntent =
           new Intent(Intent.ACTION_VIEW)
               .setData(Uri.parse(url))
-			  .addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
               .putExtra(Browser.EXTRA_HEADERS, headersBundle);
+			  
+	  launchIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
     }
 
     activity.startActivity(launchIntent);
