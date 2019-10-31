@@ -70,7 +70,7 @@ class UrlLauncher {
           new Intent(Intent.ACTION_VIEW)
               .setData(Uri.parse(url))
               .putExtra(Browser.EXTRA_HEADERS, headersBundle);
-	  Log.d("Add Flag!");			
+	  System.out.println("Add Flag!");			
 	  launchIntent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
     }
 	
